@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven'  // This should match the name you configured in Jenkins Global Tool Configuration
+    }
     stages {
         stage('Checkout Code') {
             steps {
@@ -8,7 +11,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'echo "Building Application..."'
+                sh 'mvn clean install'
             }
         }
         stage('Deploy') {
