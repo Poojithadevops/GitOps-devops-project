@@ -4,6 +4,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git 'https://github.com/Poojithadevops/GitOps-devops-project.git'
+                 timeout: 10 
             }
         }
         stage('Build') {
