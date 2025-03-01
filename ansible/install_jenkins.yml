@@ -2,9 +2,9 @@
   hosts: all
   become: yes
   tasks:
-    - name: Install Java
+    - name: Install Java (Amazon Corretto 17)
       yum:
-        name: java-1.8.0-openjdk
+        name: amazon-corretto-17
         state: present
 
     - name: Add Jenkins repo
