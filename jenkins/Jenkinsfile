@@ -13,7 +13,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh "mvn clean package"  # Build WAR file (if using Maven)
+                sh "mvn clean package"  
                 
             }
         }
